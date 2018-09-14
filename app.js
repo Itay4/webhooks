@@ -155,11 +155,9 @@ app.get('/', function(req, res){
   }, (err, res, body) => {
     if (!err) {
       console.log('message sent!')
-      res.send('message sent!');
     } else {
       console.error("Unable to send message:" + err);
-      res.send("Unable to send message:" + err);
     }
   }); 
-    
+    res.send("Message sent!");
 });
