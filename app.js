@@ -142,7 +142,7 @@ app.get('/', function(req, res){
       "id": "1438658626236625"
     },
     "message": {
-    "text": "TEST"
+    "text": "Hello, this page does not allow profanity words. Please note that you have been warned, and further actions might be taken against you."
     }
   }
 
@@ -155,9 +155,10 @@ app.get('/', function(req, res){
   }, (err, res, body) => {
     if (!err) {
       console.log('message sent!')
-      res.send('Hello World!');
+      res.send('message sent!');
     } else {
       console.error("Unable to send message:" + err);
+      res.send("Unable to send message:" + err);
     }
   }); 
     
