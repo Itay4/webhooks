@@ -2,9 +2,8 @@
   "name": "messenger-webhook",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js",
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,6 +12,9 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "request": "*"
+    "request": "^2.72.0"
+  },
+  "engines": {
+    "node": "~4.1.2"
   }
 }
