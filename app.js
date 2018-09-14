@@ -155,9 +155,10 @@ app.get('/', function(req, res){
   }, (err, res, body) => {
     if (!err) {
       console.log('message sent!')
+      res.send('Hello World!');
     } else {
       console.error("Unable to send message:" + err);
     }
   }); 
-    res.send('Hello World!');
+    
 });
