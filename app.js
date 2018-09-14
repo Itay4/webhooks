@@ -161,3 +161,24 @@ app.get('/', function(req, res){
   }); 
     res.send("Message sent!");
 });
+
+app.get('/b', function(req, res){
+  let request_body = {
+    "user": "1438658626236625"
+  }
+
+  // Send the HTTP request to the Messenger Platform
+  request({
+    "uri": "https://graph.facebook.com/v3.1/674073196304997/blocked",
+    "qs": { "access_token": PAGE_ACCESS_TOKEN },
+    "method": "POST",
+    "json": request_body
+  }, (err, res, body) => {
+    if (!err) {
+      console.log('user blocked!')
+    } else {
+      console.error("Unable to block user:" + err);
+    }
+  }); 
+    res.send("User blocked!");
+});
